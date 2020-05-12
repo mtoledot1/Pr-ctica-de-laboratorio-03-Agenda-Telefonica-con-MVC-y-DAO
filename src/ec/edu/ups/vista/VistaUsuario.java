@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.ecu.ups.controlador;
+package ec.edu.ups.vista;
 
 /**
  *
  * @author tano
  */
-public class ControladorTelefono {
-    
+public class VistaUsuario {
+
 }

@@ -1,6 +1,6 @@
 package ec.edu.ups.idao;
 
-import ec.ecu.ups.modelo.Telefono;
+import ec.edu.ups.modelo.Telefono;
 import java.util.List;
 
 /**

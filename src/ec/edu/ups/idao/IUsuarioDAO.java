@@ -1,6 +1,6 @@
 package ec.edu.ups.idao;
 
-import ec.ecu.ups.modelo.Usuario;
+import ec.edu.ups.modelo.Usuario;
 import java.util.List;
 
 /**

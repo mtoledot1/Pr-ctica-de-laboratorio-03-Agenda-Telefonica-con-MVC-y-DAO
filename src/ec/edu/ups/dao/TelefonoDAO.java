@@ -5,7 +5,7 @@
  */
 package ec.edu.ups.dao;
 
-import ec.ecu.ups.modelo.Telefono;
+import ec.edu.ups.modelo.Telefono;
 import ec.edu.ups.idao.ITelefonoDAO;
 import java.util.List;
 

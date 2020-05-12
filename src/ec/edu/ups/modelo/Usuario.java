@@ -1,4 +1,4 @@
-package ec.ecu.ups.modelo;
+package ec.edu.ups.modelo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

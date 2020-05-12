@@ -5,7 +5,7 @@
  */
 package ec.edu.ups.dao;
 
-import ec.ecu.ups.modelo.Usuario;
+import ec.edu.ups.modelo.Usuario;
 import ec.edu.ups.idao.IUsuarioDAO;
 import java.util.List;
 

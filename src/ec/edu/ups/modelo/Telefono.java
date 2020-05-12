@@ -1,4 +1,4 @@
-package ec.ecu.ups.modelo;
+package ec.edu.ups.modelo;
 public class Telefono {
     private int codigo;
     private String numero;
