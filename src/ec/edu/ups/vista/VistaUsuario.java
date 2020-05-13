@@ -22,7 +22,6 @@ public class VistaUsuario {
     
     public Usuario ingresarUsuario(){
         System.out.println("Ingrese los datos del usuario:");
-        leer.nextLine();
         System.out.print("Cedula: ");
         String cedula = leer.nextLine();
         System.out.print("Nombre: ");
@@ -37,7 +36,6 @@ public class VistaUsuario {
     }
     
     public Usuario actualizarUsuario(){
-        leer.nextLine();
         System.out.print("Ingrese la cedula  del usuario: ");
         String cedula = leer.nextLine();
         System.out.println("Ingrese los nuevos datos");
@@ -53,14 +51,12 @@ public class VistaUsuario {
     }
     
     public Usuario eliminarUsuario(){
-        leer.nextLine();
         System.out.print("Ingrese la cedula  del usuario: ");
         String cedula = leer.nextLine();
         return new Usuario(cedula, null, null, null, null);
     }
     
     public String buscarUsuario(){
-        leer.nextLine();
         System.out.print("Ingrese la cedula  del usuario: ");
         String cedula = leer.nextLine();
         return cedula;
@@ -74,5 +70,13 @@ public class VistaUsuario {
         usuarios.forEach((usuario) -> {
             System.out.println("Datos del Usuario: " + usuario.toString());
         });
+    }
+    
+    public Usuario iniciarSesion(){
+        System.out.print("Ingrese el correo: ");
+        String correo = leer.nextLine();
+        System.out.print("Ingrese la contrasenia: ");
+        String contrasenia = leer.nextLine();
+        return new Usuario(null, null, null, correo, contrasenia);
     }
 }

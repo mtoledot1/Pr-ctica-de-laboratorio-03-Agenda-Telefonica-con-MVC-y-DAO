@@ -36,8 +36,8 @@ public class VistaTelefono {
     public Telefono actualizarTelefono(){
         System.out.print("Ingrese el codigo del telefono: ");
         int codigo = leer.nextInt();
-        System.out.println("Ingrese los nuevos datos");
         leer.nextLine();
+        System.out.println("Ingrese los nuevos datos");
         System.out.print("Numero: ");
         String numero = leer.nextLine();
         System.out.print("Tipo: ");
@@ -50,12 +50,14 @@ public class VistaTelefono {
     public Telefono eliminarTelefono(){
         System.out.print("Ingrese el codigo del telefono: ");
         int codigo = leer.nextInt();
+        leer.nextLine();
         return new Telefono(codigo, null, null, null);
     }
     
     public int buscarTelefono(){
         System.out.print("Ingrese el codigo del telefono: ");
         int codigo = leer.nextInt();
+        leer.nextLine();
         return codigo;
     }
     

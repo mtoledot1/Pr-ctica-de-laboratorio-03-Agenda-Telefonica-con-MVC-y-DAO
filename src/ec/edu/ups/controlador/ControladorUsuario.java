@@ -61,4 +61,20 @@ public class ControladorUsuario {
         usuario.agregarTelefono(telefono);
         usuarioDAO.update(usuario);
     }
+    
+    public Usuario iniciarSesion(){
+        usuario = vistaUsuario.iniciarSesion();
+        List<Usuario> usuarios;
+        usuarios = usuarioDAO.findAll();
+        for(Usuario usuario : usuarios){
+            if(this.usuario.getCorreo().equals(usuario.getCorreo())){
+                if(this.usuario.getContrasenia().equals(usuario.getContrasenia())){
+                    return usuario;  
+                }else{
+                    return null;
+                }
+            }
+        }
+        return null;
+    }
 }
