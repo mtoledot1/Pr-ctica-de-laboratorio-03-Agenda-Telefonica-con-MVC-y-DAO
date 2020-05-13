@@ -5,9 +5,12 @@
  */
 package ec.edu.ups.dao;
 
-import ec.edu.ups.modelo.Usuario;
 import ec.edu.ups.idao.IUsuarioDAO;
+import ec.edu.ups.modelo.Usuario;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -15,29 +18,43 @@ import java.util.List;
  */
 public class UsuarioDAO implements IUsuarioDAO{
 
+    private Map<Integer,Usuario> usuarios;
+
+    public UsuarioDAO() {
+        usuarios = new HashMap<>();
+    }
+
     @Override
     public void create(Usuario usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        usuarios.put(usuario.hashCode(), usuario);
     }
 
     @Override
     public Usuario read(String cedula) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Usuario usuario = new Usuario(cedula, null, null, null, null);
+        if(usuarios.containsKey(usuario.hashCode())){
+            return usuarios.get(usuario.hashCode());
+        }
+        return null;
     }
 
     @Override
     public void update(Usuario usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(usuarios.containsKey(usuario.hashCode())){
+            usuarios.replace(usuario.hashCode(), usuario);
+        }
     }
 
     @Override
     public void delete(Usuario usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(usuarios.containsKey(usuario.hashCode())){
+            usuarios.remove(usuario.hashCode());
+        }
     }
 
     @Override
     public List<Usuario> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new ArrayList(usuarios.values());
     }
     
 }

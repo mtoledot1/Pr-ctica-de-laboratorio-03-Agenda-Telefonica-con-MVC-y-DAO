@@ -7,37 +7,54 @@ package ec.edu.ups.dao;
 
 import ec.edu.ups.modelo.Telefono;
 import ec.edu.ups.idao.ITelefonoDAO;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
  * @author tano
  */
 public class TelefonoDAO implements ITelefonoDAO{
+    
+    private Map<Integer,Telefono> telefonos;
 
-    @Override
-    public void create(Telefono telefono) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public TelefonoDAO() {
+        telefonos = new HashMap<>();
     }
 
     @Override
-    public Telefono read(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void create(Telefono telefono) {
+        telefonos.put(telefono.hashCode(), telefono);
+    }
+
+    @Override
+    public Telefono read(int codigo) {
+        Telefono telefono = new Telefono(codigo, null, null, null);
+        if(telefonos.containsKey(telefono.hashCode())){
+            return telefonos.get(telefono.hashCode());
+        }
+        return null;
     }
 
     @Override
     public void update(Telefono telefono) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(telefonos.containsKey(telefono.hashCode())){
+            telefonos.replace(telefono.hashCode(), telefono);
+        }
     }
 
     @Override
     public void delete(Telefono telefono) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(telefonos.containsKey(telefono.hashCode())){
+            telefonos.remove(telefono.hashCode());
+        }
     }
 
     @Override
     public List<Telefono> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new ArrayList(telefonos.values());
     }
     
 }
