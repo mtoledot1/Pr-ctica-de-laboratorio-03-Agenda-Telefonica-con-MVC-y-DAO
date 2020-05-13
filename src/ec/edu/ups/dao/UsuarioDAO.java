@@ -21,7 +21,7 @@ public class UsuarioDAO implements IUsuarioDAO{
     }
 
     @Override
-    public Usuario read(int id) {
+    public Usuario read(String cedula) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
