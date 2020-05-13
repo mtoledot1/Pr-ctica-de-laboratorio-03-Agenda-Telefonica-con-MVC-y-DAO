@@ -36,6 +36,7 @@ public class ControladorUsuario {
     public void actualizar(){
         usuario = vistaUsuario.actualizarUsuario();
         usuarioDAO.update(usuario);
+        vistaUsuario.verUsuario(usuario);
     }
     
     public void eliminar(){
@@ -55,11 +56,12 @@ public class ControladorUsuario {
         vistaUsuario.verUsuarios(usuarios);
     }
     
-    public void agregarTelefono(){
+    public void agregarTelefono(Usuario sesion){
         int codigo = vistaTelefono.buscarTelefono();
         telefono = telefonoDAO.read(codigo);
-        usuario.agregarTelefono(telefono);
-        usuarioDAO.update(usuario);
+        vistaTelefono.verTelefono(telefono);
+        sesion.agregarTelefono(telefono);
+        usuarioDAO.update(sesion);
     }
     
     public Usuario iniciarSesion(){
@@ -76,5 +78,18 @@ public class ControladorUsuario {
             }
         }
         return null;
+    }
+    
+    public void telefonosPorCedula(){
+        String cedula = vistaUsuario.buscarUsuario();
+        usuario = usuarioDAO.read(cedula);
+        List<Telefono> telefonos = usuario.getTelefonos();
+        vistaTelefono.verTelefonos(telefonos);
+    }
+    
+    public void telefonosPorCedula(Usuario usuario){
+        this.usuario = usuarioDAO.read(usuario.getCedula());
+        List<Telefono> telefonos = usuario.getTelefonos();
+        vistaTelefono.verTelefonos(telefonos);
     }
 }

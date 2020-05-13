@@ -90,10 +90,11 @@ public class Main {
                     break;
                 case 11:
                     //listar teléfonos de la sesión
-                    controladorTelefono.verTelefonos();
+                    controladorUsuario.telefonosPorCedula(sesion);
                     break;
                 case 12:
                     //listar teléfonos mediante la cédula
+                    controladorUsuario.telefonosPorCedula();
                     break;
                 case 13:
                     //listar todos los teléfonos
@@ -130,6 +131,8 @@ public class Main {
             System.out.println("13) Cambiar de Usuario");
             System.out.println("14) Cerrar Sesión");
             System.out.println("15) Cerrar programa");
+            System.out.println("15) Cerrar programa");
+            System.out.print("Ingrese una opcion: ");
             opc = leer.nextInt();
             leer.nextLine();
             if(opc < 1 || opc > 15){
@@ -150,33 +153,33 @@ public class Main {
             System.out.println("4) Eliminar Usuario");
             System.out.println("5) Buscar Usuario");
             System.out.println("6) Listar Todos los Usuarios registrados");
-            System.out.println("7) Registrar Teléfono");
-            System.out.println("8) Modificar Teléfono");
-            System.out.println("9) Eliminar Teléfono");
-            System.out.println("10) Buscar Teléfono");
-            System.out.println("11) Listar Teléfonos de un Usuario mediante la cédula");
-            System.out.println("12) Listar Todos los Teléfonos registrados");
-            System.out.println("13) Cerrar programa");
+            System.out.println("7) Listar Teléfonos de un Usuario mediante la cédula");
+            System.out.println("8) Listar Todos los Teléfonos registrados");
+            System.out.println("9) Cerrar programa");
+            System.out.print("Ingrese una opcion: ");
             opc = leer.nextInt();
             leer.nextLine();
-            if(opc < 1 || opc > 13){
+            if(opc < 1 || opc > 9){
                 System.out.println("Ingrese una opcion correcta");
             }
-        }while(opc < 1 || opc > 13);
-        if(opc == 11){
+        }while(opc < 1 || opc > 9);
+        if(opc == 7){
             return 12;
-        }else if(opc == 12){
+        }else if(opc == 8){
             return 13;
-        }else if(opc == 13){
-            return 15;
+        }else if(opc == 9){
+            return 16;
         }
         return opc;
     }
     
     public void iniciarSesion(){
-        sesion = controladorUsuario.iniciarSesion();
-        if(sesion == null){
+        Usuario inicio = controladorUsuario.iniciarSesion();
+        if(inicio == null){
             System.out.println("Usuario o contraseña incorrectos");
+        }else{
+            sesion = inicio;
+            System.out.println("Bienvenido " + sesion.getNombre() + " " + sesion.getApellido());
         }
     }
 }

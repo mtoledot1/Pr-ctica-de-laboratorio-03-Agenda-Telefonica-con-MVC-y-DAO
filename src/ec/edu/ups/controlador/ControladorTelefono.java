@@ -34,6 +34,7 @@ public class ControladorTelefono {
     public void actualizar(){
         telefono = vistaTelefono.actualizarTelefono();
         telefonoDAO.update(telefono);
+        vistaTelefono.verTelefono(telefono);
     }
     
     public void eliminar(){

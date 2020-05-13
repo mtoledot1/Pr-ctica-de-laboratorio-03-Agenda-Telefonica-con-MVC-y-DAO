@@ -36,7 +36,7 @@ public class VistaUsuario {
     }
     
     public Usuario actualizarUsuario(){
-        System.out.print("Ingrese la cedula  del usuario: ");
+        System.out.print("Ingrese la cedula del usuario: ");
         String cedula = leer.nextLine();
         System.out.println("Ingrese los nuevos datos");
         System.out.print("Nombre: ");
@@ -51,13 +51,13 @@ public class VistaUsuario {
     }
     
     public Usuario eliminarUsuario(){
-        System.out.print("Ingrese la cedula  del usuario: ");
+        System.out.print("Ingrese la cedula del usuario: ");
         String cedula = leer.nextLine();
         return new Usuario(cedula, null, null, null, null);
     }
     
     public String buscarUsuario(){
-        System.out.print("Ingrese la cedula  del usuario: ");
+        System.out.print("Ingrese la cedula del usuario: ");
         String cedula = leer.nextLine();
         return cedula;
     }
