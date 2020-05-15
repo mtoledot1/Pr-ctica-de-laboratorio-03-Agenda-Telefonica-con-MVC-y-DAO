@@ -22,7 +22,9 @@ La práctica se encuentra en GitHub para poder ser revisada, descargada y probad
  * Emplear las herramientas git y github para mantener un record de los cambios del programa, y para tener un repositorio en linea del programa para fácil acceso público.
 ## Conclusiones
  * Las herramientas git y github son muy útiles al momento de crear una aplicación, puesto que nos ayuda a tener un listado de los cambios en un programa, y se puede utilizar para involucrar a varias personas en nuestros proyectos.
+ 
  * El diseño MVC y DAO son modelos que nos permiten tener una comunicación eficaz dentro del programa, nos ayudan a proteger los datos que utilizamos, y nos permiten realizar cambios en el programa de una manera fácil y rápida, ya que nos obligan a tener un orden en cuanto a las funcionalidades del programa.
 ## Recomendaciones
+
  * Aprender sobre las diferentes funciones del git y github, así como el correcto uso de las mismas, no hacer commit por el más mínimo cambio, dar mensajes adecuados al momento de hacer commit, aprender a manejar los repositorios remotos como el github.
  * Emplear de manera correcta los modelos MVC y DAO, y entender cual es su propósito en una aplicación, así como mantener el orden que se establece entre las clases y la comunicación entre ellas.
