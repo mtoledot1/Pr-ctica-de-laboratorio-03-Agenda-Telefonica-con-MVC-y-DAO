@@ -98,7 +98,11 @@ public class Telefono {
 
     @Override
     public String toString() {
-        return "Telefono{" + "codigo=" + codigo + ", numero=" + numero + ", tipo=" + tipo + ", operadora=" + operadora + '}';
+        return "Teléfono:\n" + 
+                "Código: " + codigo + "\n" + 
+                "Número: " + numero + "\n" +
+                "Tipo: " + tipo + "\n" +
+                "Operadora: " + operadora + "\n";
     }
     
     

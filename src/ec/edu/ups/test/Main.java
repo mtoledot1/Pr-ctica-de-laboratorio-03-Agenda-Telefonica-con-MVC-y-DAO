@@ -129,7 +129,6 @@ public class Main {
             System.out.println("13) Cambiar de Usuario");
             System.out.println("14) Cerrar Sesión");
             System.out.println("15) Cerrar programa");
-            System.out.println("15) Cerrar programa");
             System.out.print("Ingrese una opcion: ");
             opc = leer.nextInt();
             leer.nextLine();

@@ -142,6 +142,11 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "cedula=" + getCedula() + ", nombre=" + getNombre() + ", apellido=" + getApellido() + ", correo=" + getCorreo() + ", contrasenia=" + getContrasenia() + '}';
+        return "Usuario" + 
+                "Cédula: " + getCedula() + "\n" +
+                "Nombre: " + getNombre() + "\n" +
+                "Apellido: " + getApellido() + "\n" +
+                "Correo: " + getCorreo() + "\n" + 
+                "Contraseña: " + getContrasenia() + "\n";
     }
 }
