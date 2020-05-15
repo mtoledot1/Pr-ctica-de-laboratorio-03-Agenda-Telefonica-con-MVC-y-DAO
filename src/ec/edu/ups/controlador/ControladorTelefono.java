@@ -45,6 +45,7 @@ public class ControladorTelefono {
     public void eliminar(){
         telefono = vistaTelefono.eliminarTelefono();
         telefonoDAO.delete(telefono);
+        controladorUsuario.eliminarTelefono(telefono);
     }
     
     public void verTelefono(){

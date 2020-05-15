@@ -66,6 +66,10 @@ public class ControladorUsuario {
         sesion.actualizarTelefono(telefono);
     }
     
+    public void eliminarTelefono(Telefono telefono){
+        sesion.eliminarTelefono(telefono);
+    }
+    
     public void iniciarSesion(){
         usuario = vistaUsuario.iniciarSesion();
         List<Usuario> usuarios;
