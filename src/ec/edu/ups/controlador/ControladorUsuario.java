@@ -19,6 +19,7 @@ public class ControladorUsuario {
     private IUsuarioDAO usuarioDAO;
     private ITelefonoDAO telefonoDAO;
     private Usuario usuario;
+    private Usuario sesion;
     private Telefono telefono;
 
     public ControladorUsuario(VistaUsuario vistaUsuario, VistaTelefono vistaTelefono, IUsuarioDAO iUsuarioDAO, ITelefonoDAO iTelefonoDAO) {
@@ -56,40 +57,53 @@ public class ControladorUsuario {
         vistaUsuario.verUsuarios(usuarios);
     }
     
-    public void agregarTelefono(Usuario sesion){
-        int codigo = vistaTelefono.buscarTelefono();
-        telefono = telefonoDAO.read(codigo);
-        vistaTelefono.verTelefono(telefono);
+    public void agregarTelefono(Telefono telefono){
         sesion.agregarTelefono(telefono);
         usuarioDAO.update(sesion);
     }
     
-    public Usuario iniciarSesion(){
+    public void actualizarTelefono(Telefono telefono){
+        sesion.actualizarTelefono(telefono);
+    }
+    
+    public void iniciarSesion(){
         usuario = vistaUsuario.iniciarSesion();
         List<Usuario> usuarios;
         usuarios = usuarioDAO.findAll();
         for(Usuario usuario : usuarios){
             if(this.usuario.getCorreo().equals(usuario.getCorreo())){
                 if(this.usuario.getContrasenia().equals(usuario.getContrasenia())){
-                    return usuario;  
-                }else{
-                    return null;
+                    sesion = usuario;
+                    this.usuario = sesion;
+                    System.out.println("Bienvenido " + sesion.getNombre() + " " + sesion.getApellido());
+                    return;
                 }
             }
         }
-        return null;
+        System.out.println("Usuario o contraseña incorrectos");
+    }
+    
+    public void cerrarSesion(){
+        sesion = null;
     }
     
     public void telefonosPorCedula(){
         String cedula = vistaUsuario.buscarUsuario();
         usuario = usuarioDAO.read(cedula);
+        System.out.println(usuario.toString());
         List<Telefono> telefonos = usuario.getTelefonos();
         vistaTelefono.verTelefonos(telefonos);
     }
     
-    public void telefonosPorCedula(Usuario usuario){
-        this.usuario = usuarioDAO.read(usuario.getCedula());
-        List<Telefono> telefonos = usuario.getTelefonos();
+    public void telefonosSesion(){
+        List<Telefono> telefonos = sesion.getTelefonos();
         vistaTelefono.verTelefonos(telefonos);
+    }
+    
+    public boolean sesionIniciada(){
+        if(sesion == null)
+            return false;
+        else
+            return true;
     }
 }

@@ -28,9 +28,7 @@ public class Main {
     ITelefonoDAO telefonoDAO = new TelefonoDAO();
     //controladores
     ControladorUsuario controladorUsuario = new ControladorUsuario(vistaUsuario, vistaTelefono, usuarioDAO, telefonoDAO);
-    ControladorTelefono controladorTelefono = new ControladorTelefono(vistaTelefono, telefonoDAO);
-    //sesión
-    Usuario sesion;
+    ControladorTelefono controladorTelefono = new ControladorTelefono(vistaTelefono, telefonoDAO, controladorUsuario);
 
     /**
      * @param args the command line arguments
@@ -42,7 +40,7 @@ public class Main {
     public Main(){
         int opc = 0;
         do{
-            if(sesion != null){
+            if(controladorUsuario.sesionIniciada()){
                 opc = menuSesionIniciada();
             }else{
                 opc = menuNormal();
@@ -50,7 +48,7 @@ public class Main {
             switch(opc){
                 case 1:
                     //inicio de sesión
-                    iniciarSesion();
+                    controladorUsuario.iniciarSesion();
                     break;
                 case 2:
                     //Registro de usuarios
@@ -90,7 +88,7 @@ public class Main {
                     break;
                 case 11:
                     //listar teléfonos de la sesión
-                    controladorUsuario.telefonosPorCedula(sesion);
+                    controladorUsuario.telefonosSesion();
                     break;
                 case 12:
                     //listar teléfonos mediante la cédula
@@ -102,11 +100,11 @@ public class Main {
                     break;
                 case 14:
                     //cambiar de usuario
-                    iniciarSesion();
+                    controladorUsuario.iniciarSesion();
                     break;
                 case 15:
                     //cerrar sesión
-                    sesion = null;
+                    controladorUsuario.cerrarSesion();
                     break;
             }
         }while(opc != 16);
@@ -173,13 +171,5 @@ public class Main {
         return opc;
     }
     
-    public void iniciarSesion(){
-        Usuario inicio = controladorUsuario.iniciarSesion();
-        if(inicio == null){
-            System.out.println("Usuario o contraseña incorrectos");
-        }else{
-            sesion = inicio;
-            System.out.println("Bienvenido " + sesion.getNombre() + " " + sesion.getApellido());
-        }
-    }
+    
 }

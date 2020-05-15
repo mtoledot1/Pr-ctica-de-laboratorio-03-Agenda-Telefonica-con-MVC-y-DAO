@@ -20,21 +20,26 @@ public class ControladorTelefono {
     private VistaTelefono vistaTelefono;
     private ITelefonoDAO telefonoDAO;
     private Telefono telefono;
+    private ControladorUsuario controladorUsuario;
 
-    public ControladorTelefono(VistaTelefono vistaTelefono, ITelefonoDAO telefonoDAO) {
+    public ControladorTelefono(VistaTelefono vistaTelefono, ITelefonoDAO telefonoDAO, ControladorUsuario controladorUsuario) {
         this.vistaTelefono = vistaTelefono;
         this.telefonoDAO = telefonoDAO;
+        this.controladorUsuario = controladorUsuario;
     }
     
     public void registrar(){
         telefono = vistaTelefono.ingresarTelefono();
         telefonoDAO.create(telefono);
+        vistaTelefono.verTelefono(telefono);
+        controladorUsuario.agregarTelefono(telefono);
     }
     
     public void actualizar(){
         telefono = vistaTelefono.actualizarTelefono();
         telefonoDAO.update(telefono);
         vistaTelefono.verTelefono(telefono);
+        controladorUsuario.actualizarTelefono(telefono);
     }
     
     public void eliminar(){
