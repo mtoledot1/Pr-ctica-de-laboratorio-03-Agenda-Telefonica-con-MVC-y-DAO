@@ -142,7 +142,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario" + 
+        return "Usuario\n" +
                 "Cédula: " + getCedula() + "\n" +
                 "Nombre: " + getNombre() + "\n" +
                 "Apellido: " + getApellido() + "\n" +
