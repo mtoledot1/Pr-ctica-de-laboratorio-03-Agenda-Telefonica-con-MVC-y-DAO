@@ -2,18 +2,18 @@
 ## Objetivo Alcanzado
  * Utilizar el patrón de MVC para el desarrollo de aplicaciones de software
 ## Actividades Desarrolladas
-## 1. Crear un repositorio en GitHub con el nombre “Práctica de laboratorio 03: Agenda Telefónica con MVC y DAO”.
+### 1. Crear un repositorio en GitHub con el nombre “Práctica de laboratorio 03: Agenda Telefónica con MVC y DAO”.
 ![Repositorio GitHub](https://github.com/mtoledot1/Capturas/blob/master/Practica%203/Repositorio.jpg)
 
 [Repositorio de la Práctica](https://github.com/mtoledot1/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO)
-## 2. Desarrollar una aplicación en java para gestionar una agenda telefónica según los requerimientos
+### 2. Desarrollar una aplicación en java para gestionar una agenda telefónica según los requerimientos
 La práctica se basa en el siguiente diagrama de clases.
 ![Diagrama de clases](https://github.com/mtoledot1/Capturas/blob/master/Practica%203/Diagrama%20de%20Clases.jpg)
 
 La práctica se encuentra en GitHub para poder ser revisada, descargada y probada.
 
 [Práctica](https://github.com/mtoledot1/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO)
-## 3. Realizar varios commits en la herramienta GitHub que demuestren el desarrollo de la aplicación desde principio a fin.
+### 3. Realizar varios commits en la herramienta GitHub que demuestren el desarrollo de la aplicación desde principio a fin.
 ![Diagrama de clases](https://github.com/mtoledot1/Capturas/blob/master/Practica%203/Commits-1.jpg)
 
 ![Diagrama de clases](https://github.com/mtoledot1/Capturas/blob/master/Practica%203/Commits-2.jpg)
