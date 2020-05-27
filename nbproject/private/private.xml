@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/modelo/Telefono.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/dao/UsuarioDAO.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/dao/TelefonoDAO.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/vista/VistaTelefono.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/idao/ITelefonoDAO.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/vista/VistaUsuario.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/idao/IUsuarioDAO.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/controlador/ControladorUsuario.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/test/Main.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/modelo/Usuario.java</file>
-            <file>file:/home/tano/NetBeansProjects/Practica-de-laboratorio-03-Agenda-Telefonica-con-MVC-y-DAO/src/ec/edu/ups/controlador/ControladorTelefono.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
